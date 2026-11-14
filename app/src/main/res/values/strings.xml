@@ -3,4 +3,8 @@
     <string name="app_name">Vanya Widgets</string>
     <string name="widget_counter_name">Счётчик</string>
     <string name="widget_counter_description">Счётчик с кнопками + и −</string>
+    <string name="widget_date_name">Дата</string>
+    <string name="widget_date_description">Число, месяц и день недели</string>
+    <string name="widget_water_name">Вода</string>
+    <string name="widget_water_description">Трекер стаканов воды</string>
 </resources>
