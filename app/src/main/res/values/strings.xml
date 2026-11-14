@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Vanya Widgets</string>
+    <string name="widget_counter_name">Счётчик</string>
+    <string name="widget_counter_description">Счётчик с кнопками + и −</string>
+</resources>
