@@ -7,4 +7,10 @@
     <string name="widget_date_description">Число, месяц и день недели</string>
     <string name="widget_water_name">Вода</string>
     <string name="widget_water_description">Трекер стаканов воды</string>
+    <string name="widget_calendar_name">Календарь</string>
+    <string name="widget_calendar_description">Сетка текущего месяца</string>
+    <string name="widget_clock_name">Часы</string>
+    <string name="widget_clock_description">Цифровые часы с датой</string>
+    <string name="widget_year_name">Год</string>
+    <string name="widget_year_description">Сколько процентов года прошло</string>
 </resources>
