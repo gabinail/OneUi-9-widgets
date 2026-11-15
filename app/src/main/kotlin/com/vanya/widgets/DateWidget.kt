@@ -44,9 +44,9 @@ class DateWidget : GlanceAppWidget() {
         val info = "Неделя $week · день ${today.dayOfYear}"
 
         provideContent {
+            AnimBox(R.drawable.bg_purple, animLayout(today.monthValue)) {
             val base = GlanceModifier
                 .fillMaxSize()
-                .background(ImageProvider(R.drawable.bg_purple))
                 .padding(12.dp)
 
             when (formOf(LocalSize.current)) {
@@ -151,6 +151,7 @@ class DateWidget : GlanceAppWidget() {
                         )
                     )
                 }
+            }
             }
         }
     }

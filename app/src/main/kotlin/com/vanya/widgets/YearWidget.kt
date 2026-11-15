@@ -41,11 +41,11 @@ class YearWidget : GlanceAppWidget() {
         val year = today.year.toString()
 
         provideContent {
+            AnimBox(R.drawable.bg_forest, R.layout.anim_drift) {
             val size = LocalSize.current
             val barW = size.width - 24.dp
             val base = GlanceModifier
                 .fillMaxSize()
-                .background(ImageProvider(R.drawable.bg_forest))
                 .padding(12.dp)
 
             when (formOf(size)) {
@@ -145,6 +145,7 @@ class YearWidget : GlanceAppWidget() {
                     Spacer(GlanceModifier.height(14.dp))
                     ProgressBar(barW, fraction)
                 }
+            }
             }
         }
     }

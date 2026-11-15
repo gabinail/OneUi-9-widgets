@@ -44,7 +44,11 @@ class WaterWidget : GlanceAppWidget() {
     override val sizeMode: SizeMode = SizeMode.Exact
 
     override suspend fun provideGlance(context: Context, id: GlanceId) {
-        provideContent { Content() }
+        provideContent {
+            val glasses = currentState<Preferences>()[WaterKey] ?: 0
+            val anim = if (glasses >= WATER_GOAL) R.layout.anim_confetti else R.layout.anim_water
+            AnimBox(R.drawable.bg_teal, anim) { Content() }
+        }
     }
 
     @Composable
@@ -55,7 +59,6 @@ class WaterWidget : GlanceAppWidget() {
         val dots = "●".repeat(count) + "○".repeat(WATER_GOAL - count)
         val base = GlanceModifier
             .fillMaxSize()
-            .background(ImageProvider(R.drawable.bg_teal))
             .padding(12.dp)
 
         when (formOf(size)) {

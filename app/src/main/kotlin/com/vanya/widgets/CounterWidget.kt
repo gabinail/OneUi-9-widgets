@@ -42,7 +42,7 @@ class CounterWidget : GlanceAppWidget() {
     override val sizeMode: SizeMode = SizeMode.Exact
 
     override suspend fun provideGlance(context: Context, id: GlanceId) {
-        provideContent { Content() }
+        provideContent { AnimBox(R.drawable.bg_blue, R.layout.anim_sparkles) { Content() } }
     }
 
     @Composable
@@ -51,7 +51,6 @@ class CounterWidget : GlanceAppWidget() {
         val size = LocalSize.current
         val base = GlanceModifier
             .fillMaxSize()
-            .background(ImageProvider(R.drawable.bg_blue))
             .padding(12.dp)
 
         when (formOf(size)) {
