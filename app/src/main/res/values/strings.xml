@@ -13,4 +13,10 @@
     <string name="widget_clock_description">Цифровые часы с датой</string>
     <string name="widget_year_name">Год</string>
     <string name="widget_year_description">Сколько процентов года прошло</string>
+    <string name="widget_currency_name">Курсы валют</string>
+    <string name="widget_currency_description">Курс доллара, евро и других валют по данным ЦБ РФ</string>
+    <string name="widget_since_name">Счётчик времени</string>
+    <string name="widget_since_description">Сколько прошло или осталось до события</string>
+    <string name="widget_note_name">Заметка</string>
+    <string name="widget_note_description">Короткая заметка на рабочем столе</string>
 </resources>
