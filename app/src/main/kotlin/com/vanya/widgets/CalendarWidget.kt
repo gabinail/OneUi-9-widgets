@@ -1,6 +1,7 @@
 package com.vanya.widgets
 
 import android.content.Context
+import android.widget.RemoteViews
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
@@ -11,6 +12,7 @@ import androidx.glance.GlanceId
 import androidx.glance.GlanceModifier
 import androidx.glance.ImageProvider
 import androidx.glance.LocalSize
+import androidx.glance.appwidget.AndroidRemoteViews
 import androidx.glance.appwidget.GlanceAppWidget
 import androidx.glance.appwidget.GlanceAppWidgetReceiver
 import androidx.glance.appwidget.SizeMode
@@ -60,11 +62,13 @@ class CalendarWidget : GlanceAppWidget() {
                 today.month.getDisplayName(DateTextStyle.SHORT_STANDALONE, ru).uppercase(ru)
             }
 
+            Box(modifier = GlanceModifier.fillMaxSize().background(ImageProvider(R.drawable.bg_slate))) {
+            AndroidRemoteViews(
+                remoteViews = RemoteViews(context.packageName, animLayout(today.monthValue)),
+                modifier = GlanceModifier.fillMaxSize()
+            )
             Column(
-                modifier = GlanceModifier
-                    .fillMaxSize()
-                    .background(ImageProvider(R.drawable.bg_slate))
-                    .padding(pad),
+                modifier = GlanceModifier.fillMaxSize().padding(pad),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
@@ -107,6 +111,7 @@ class CalendarWidget : GlanceAppWidget() {
                         }
                     }
                 }
+            }
             }
         }
     }

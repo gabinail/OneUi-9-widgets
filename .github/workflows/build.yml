@@ -19,6 +19,15 @@ jobs:
         with:
           gradle-version: "8.13"
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Generate animation frames
+        run: |
+          pip install pillow
+          python3 tools/gen_frames.py
+
       - name: Build debug APK
         run: gradle assembleDebug --no-daemon
 
